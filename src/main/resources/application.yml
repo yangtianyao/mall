@@ -3,10 +3,31 @@ mybatis:
   mapperLocations: classpath:mapper/*.xml
 
 spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.230.128:3306/chuhe?useUnicode=true&characterEncoding=utf8
-    username: chuhe
-    password: chuhe2018
-    #  π”√druid ˝æ›‘¥
-    type: com.alibaba.druid.pool.DruidDataSource
+    datasource:
+        name: test
+        url: jdbc:mysql://192.168.230.128:3306/chuhe?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true
+        username: chuhe
+        password: chuhe2018
+        # ‰ΩøÁî®druidÊï∞ÊçÆÊ∫ê
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+    returnPageInfo: check

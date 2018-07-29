@@ -13,9 +13,9 @@ public class ProductInfoDao {
     @Autowired
     private ProductInfoMapper productInfoMapper;
 
-    List<ProductInfo> listByCategory(int category) {
+    public List<ProductInfo> listByCategory(int categoryId) {
         Example example = new Example(ProductInfo.class);
-        example.createCriteria().andEqualTo("category", category);
+        example.createCriteria().andEqualTo("categoryId", categoryId);
         return productInfoMapper.selectByExample(example);
     }
 }

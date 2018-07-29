@@ -13,7 +13,7 @@ public class ProductInfo {
     private String name;
     private Double price;
     private Integer stock;
-    private Integer category;
+    private Integer categoryId;
     private Integer salesStatus;
     private String coverUrl;
     private Date createTime;
