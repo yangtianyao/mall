@@ -25,5 +25,4 @@ public class ProductInfoController {
         }
         return ResponseResult.fail();
     }
-
 }
