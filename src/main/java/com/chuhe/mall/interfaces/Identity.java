@@ -1,6 +1,6 @@
 package com.chuhe.mall.interfaces;
 
-public interface IdEntity {
+public interface Identity {
     void setId(Long id);
     Long getId();
 }
