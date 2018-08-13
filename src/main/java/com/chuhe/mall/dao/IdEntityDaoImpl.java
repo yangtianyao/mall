@@ -2,19 +2,13 @@ package com.chuhe.mall.dao;
 
 import com.chuhe.mall.exception.ChuheException;
 import com.chuhe.mall.interfaces.IdEntity;
-import com.chuhe.mall.mapper.IdEntityMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Repository;
+import tk.mybatis.mapper.common.Mapper;
 
-import javax.annotation.Resource;
 import java.lang.reflect.ParameterizedType;
 
 @Slf4j
-@Repository
-public class IdDaoImpl<M extends IdEntityMapper<E>, E extends IdEntity> {
-    @Resource(name = "idEntityMapper")
+public class IdEntityDaoImpl<M extends Mapper<E>, E extends IdEntity> implements IdEntityDao<E> {
     protected M mapper;
 
     public E getById(Long id) {

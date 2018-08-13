@@ -1,6 +1,6 @@
 package com.chuhe.mall.dao;
 
-public interface IdDao<E> {
+public interface IdEntityDao<E> {
     E getById(Long id);
 
     int updateById(Long id);
