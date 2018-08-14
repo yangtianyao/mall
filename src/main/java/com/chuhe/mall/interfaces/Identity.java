@@ -1,4 +1,4 @@
-package com.chuhe.mall.common.entity;
+package com.chuhe.mall.interfaces;
 
 public interface Identity {
     void setId(Long id);
