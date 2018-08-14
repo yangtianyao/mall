@@ -1,6 +1,8 @@
 package com.chuhe.mall.dao;
 
-public interface IdentityDao<E> {
+import com.chuhe.mall.common.entity.Identity;
+
+public interface IdentityDao<E extends Identity> {
     E getById(Long id);
 
     E getById(E e);

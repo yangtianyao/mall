@@ -1,13 +1,6 @@
 package com.chuhe.mall.dao;
 
-import tk.mybatis.mapper.entity.Example;
+import com.chuhe.mall.common.entity.BaseEntity;
 
-import java.util.List;
-
-public interface BaseDao<E> {
-    List<E> getValidData(Example example);
-
-    List<E> getValidData(E e);
-
-    int updateByIdCurrentTime(E e);
+public interface BaseDao<E extends BaseEntity> extends IdentityDao<E> {
 }

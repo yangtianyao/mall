@@ -1,13 +1,14 @@
 package com.chuhe.mall.model;
 
-import com.chuhe.mall.interfaces.BaseEntity;
+import com.chuhe.mall.common.entity.BaseEntity;
+import com.chuhe.mall.common.entity.CrawlerEntity;
 import lombok.Data;
 
 import javax.persistence.Id;
 import java.util.Date;
 
 @Data
-public class CrawlerProductInfo implements BaseEntity {
+public class CrawlerProductInfo implements CrawlerEntity {
     @Id
     private Long id;
     private String sourceDataCode;

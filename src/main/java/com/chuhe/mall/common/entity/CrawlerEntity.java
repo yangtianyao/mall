@@ -1,4 +1,4 @@
-package com.chuhe.mall.interfaces;
+package com.chuhe.mall.common.entity;
 
 public interface CrawlerEntity extends BaseEntity {
     void setSourceSiteCode(String sourceSiteCode);
